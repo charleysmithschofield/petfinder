@@ -7,7 +7,7 @@ export function PetList() {
   const [pets, setPets] = useState<Pet[]>([]);
 
   useEffect(() => {
-    getPets().then((pets) => console.log(pets));
+    getPets().then((pets) => setPets(pets));
   }, []);
 
   return(
