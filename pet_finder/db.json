@@ -1,0 +1,149 @@
+{
+  "adoptions": [
+    {
+      "firstName": "Cassian",
+      "middleName": "Jasper",
+      "lastName": "Smith",
+      "hasFencedYard": true,
+      "hasChildren": false,
+      "hasOtherPets": false,
+      "phoneNumber": "",
+      "email": "cassian@example.com",
+      "aboutSelf": "dlfkjs",
+      "id": 1
+    },
+    {
+      "firstName": "Michelle",
+      "middleName": "Erica",
+      "lastName": "Thompson",
+      "hasFencedYard": true,
+      "hasChildren": false,
+      "hasOtherPets": false,
+      "phoneNumber": "",
+      "email": "michelle@example.com",
+      "aboutSelf": "adsfas",
+      "id": 1
+    },{
+      "firstName": "Michael",
+      "middleName": "R",
+      "lastName": "Bronson",
+      "hasFencedYard": true,
+      "hasChildren": false,
+      "hasOtherPets": false,
+      "phoneNumber": "",
+      "email": "asdfas@sdafds.com",
+      "aboutSelf": "adsfas",
+      "id": 1
+    }
+  ],
+  "pets": [
+    {
+      "id": 1,
+      "name": "Mortimer",
+      "animalType": "cat",
+      "age": 9,
+      "description": "Mortimer is an extremely cuddly cat that likes to spend all his time in your lap getting scratches. He also like to bask in the sun for hours. His favorite toy is his floppy fish but he would rather hunt real birds if he were allowed to.",
+      "adopted": false,
+      "image": "cat1.jpg",
+      "breed": "Brown Tabby",
+      "isBoy": true,
+      "isAdopted": false
+    },
+    {
+      "id": 2,
+      "name": "Kenai",
+      "animalType": "dog",
+      "age": 7,
+      "description": "Kenai is an active girl that loves to play. She enjoys being with her favourite people. She enjoys chasing squirrels, going for walks and playing in the snow.",
+      "adopted": false,
+      "image": "dog1.jpg",
+      "breed": "American Akita",
+      "isBoy": false,
+      "isAdopted": false
+    },
+    {
+      "id": 3,
+      "name": "Zuzu",
+      "animalType": "cat",
+      "age": 6,
+      "description": "Zuzu is a sweet girl that loves to snuggle. She enjoys hunting mice and stealing your cereal milk in the morning. She is an excellent companion for young or older children.",
+      "adopted": false,
+      "image": "cat2.jpg",
+      "breed": "Grey Tabby",
+      "isBoy": false,
+      "isAdopted": false
+    },
+    {
+      "id": 4,
+      "name": "Everest",
+      "animalType": "dog",
+      "age": 3,
+      "description": "Everest is a big goof ball! He is easy going and all he wants is for you to give him all the pets. He enjoys butt smacks, chasing his tennis ball and going on hikes.",
+      "adopted": false,
+      "image": "dog2.jpg",
+      "breed": "German Shepherd",
+      "isBoy": true,
+      "isAdopted": false
+    },
+    {
+      "id": 5,
+      "name": "Jack",
+      "animalType": "cat",
+      "age": 12,
+      "description": "Jack is our senior cat resident. Despite his age he continues to play just like a kitten. He enjoys long naps and chasing his favourite toy, a feathered stick.",
+      "adopted": false,
+      "image": "cat3.jpg",
+       "breed": "Domestic Short Hair",
+      "isBoy": true,
+      "isAdopted": false
+    },
+    {
+      "id": 6,
+      "name": "Zola",
+      "animalType": "dog",
+      "age": 4,
+      "description": "Zola is a shy girl but will warm up to you quickly when she receives some good ear scratches. She is playful and sweet, prefering to always be beside her person.",
+      "adopted": false,
+      "image": "dog3.jpg",
+       "breed": "American Pit Bull",
+      "isBoy": false,
+      "isAdopted": false
+    },
+    {
+      "id": 7,
+      "name": "Frankie",
+      "animalType": "cat",
+      "age": 3,
+      "description": "Frankie is an adventurous boy that likes to go out on his harness. He enjoys long hikes, camping trips and even going out on the water. No adventure is too big for this spirited boy.",
+      "adopted": false,
+      "image": "cat4.jpg",
+       "breed": "Black Domestic Short Hair",
+      "isBoy": true,
+      "isAdopted": false
+    },
+    {
+      "id": 8,
+      "name": "Moose",
+      "animalType": "dog",
+      "age": 3,
+      "description": "Moose is a fun loving girl that enjoys swimming more than life itself. She is excellent with young kids and would be best suited for an active, young family.",
+      "adopted": true,
+      "image": "dog4.jpg",
+       "breed": "Brown Lab",
+      "isBoy": false,
+      "isAdopted": true
+    },
+    {
+      "id": 9,
+      "name": "Pork Chop",
+      "animalType": "cat",
+      "age": 1,
+      "description": "Pork Chop is a kind boy that likes to laze about the house. He enjoys hunting his mice toys and soaking up the sun rays in the afternoon.",
+      "adopted": false,
+      "image": "cat5.jpg",
+       "breed": "Orange Tabby",
+      "isBoy": true,
+      "isAdopted": false
+    }
+  ]
+}
