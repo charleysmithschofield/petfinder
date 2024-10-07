@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Pet } from "../models/Pet";
 import { getPetById } from "../services/petService";
 import { Card, Col, Row } from "react-bootstrap";
+import "./css/petdetails.css";
 
 export function PetDetails() {
   const { id } = useParams();
