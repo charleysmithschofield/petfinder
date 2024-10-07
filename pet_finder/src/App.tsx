@@ -4,6 +4,7 @@ import './App.css';
 import { Header } from './components/Header';
 import { PetList } from './components/PetList';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { PetDetails } from './components/PetDetails';
 
 
 function App() {
@@ -13,9 +14,8 @@ function App() {
         <Header />  
         <Routes>
           <Route path="/" element={<PetList></PetList>}></Route>
-          {/* <Route path="/details/:id" element={<PetDetails></PetDetails>}></Route> */}
+          <Route path="/details/:id" element={<PetDetails />}></Route>
         </Routes> 
-        <Header/>
       </Router>
     </div>
   );
