@@ -129,40 +129,39 @@ export function PetAdoptionForm() {
                   />
                 </Col>
               </Form.Group>
-              {pet?.animalType === 'dog' && (
-                <div className="checkbox-section">
-                  {/* Group of checkboxes for dog-specific questions */}
-                  <Form.Group controlId="hasFencedYard" className="mb-3">
-                    <Form.Check
-                      type="checkbox"
-                      name="hasFencedYard"
-                      checked={formValues.hasFencedYard}
-                      onChange={handleChange}
-                      label="Do you have a fenced yard?"
-                    />
-                  </Form.Group>
 
-                  <Form.Group controlId="hasChildren" className="mb-3">
-                    <Form.Check
-                      type="checkbox"
-                      name="hasChildren"
-                      checked={formValues.hasChildren}
-                      onChange={handleChange}
-                      label="Do you have children?"
-                    />
-                  </Form.Group>
+              <div className="checkbox-section">
+                {/* Always show all questions for both dogs and cats */}
+                <Form.Group controlId="hasFencedYard" className="mb-3">
+                  <Form.Check
+                    type="checkbox"
+                    name="hasFencedYard"
+                    checked={formValues.hasFencedYard}
+                    onChange={handleChange}
+                    label="Do you have a fenced yard?"
+                  />
+                </Form.Group>
 
-                  <Form.Group controlId="hasOtherPets" className="mb-3">
-                    <Form.Check
-                      type="checkbox"
-                      name="hasOtherPets"
-                      checked={formValues.hasOtherPets}
-                      onChange={handleChange}
-                      label="Do you have other pets?"
-                    />
-                  </Form.Group>
-                </div>
-              )}
+                <Form.Group controlId="hasChildren" className="mb-3">
+                  <Form.Check
+                    type="checkbox"
+                    name="hasChildren"
+                    checked={formValues.hasChildren}
+                    onChange={handleChange}
+                    label="Do you have children?"
+                  />
+                </Form.Group>
+
+                <Form.Group controlId="hasOtherPets" className="mb-3">
+                  <Form.Check
+                    type="checkbox"
+                    name="hasOtherPets"
+                    checked={formValues.hasOtherPets}
+                    onChange={handleChange}
+                    label="Do you have other pets?"
+                  />
+                </Form.Group>
+              </div>
 
               <Button variant="primary" type="submit" className="w-100">
                 Submit
