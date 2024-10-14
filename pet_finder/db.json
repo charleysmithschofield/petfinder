@@ -54,6 +54,39 @@
       "phoneNumber": "123-456-5874",
       "email": "chicken@test.com",
       "aboutSelf": "falsdjfoaijfio"
+    },
+    {
+      "id": "9252",
+      "firstName": "Charley",
+      "lastName": "Smith-Schofield",
+      "hasFencedYard": true,
+      "hasChildren": false,
+      "hasOtherPets": true,
+      "phoneNumber": "867-334-3893",
+      "email": "charleyschofield@hotmail.com",
+      "aboutSelf": "I am the best dog mother."
+    },
+    {
+      "id": "8cf6",
+      "firstName": "Charley",
+      "lastName": "Smith-Schofield",
+      "hasFencedYard": false,
+      "hasChildren": true,
+      "hasOtherPets": false,
+      "phoneNumber": "867-334-3893",
+      "email": "charleyschofield@hotmail.com",
+      "aboutSelf": ".ksjclkfAS"
+    },
+    {
+      "id": "1ee4",
+      "firstName": "Ham",
+      "lastName": "Chicken",
+      "hasFencedYard": true,
+      "hasChildren": true,
+      "hasOtherPets": false,
+      "phoneNumber": "123-455-8686",
+      "email": "enauk@sle.com",
+      "aboutSelf": "asdkfhaksd"
     }
   ],
   "pets": [

@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { Alert, Button, Col, Form, Row } from "react-bootstrap";
 import { AdoptionForm } from "../models/AdoptionForm";
 import { postAdoption } from "../services/adoptionService";
+import './css/petadoptionform.css';
 
 export function PetAdoptionForm() {
   const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
@@ -28,7 +29,7 @@ export function PetAdoptionForm() {
     }
   }, [id]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
 
     if (type === 'checkbox') {
@@ -51,107 +52,119 @@ export function PetAdoptionForm() {
   }
 
   return (
-    <div className="PetAdoptionForm">
+    <div className="PetAdoptionForm container my-5">
       <Row>
         <Col lg={3}></Col>
         <Col lg={6}>
           {formSubmitted ? (
-            <Alert variant="success">One of our team members will get back to you as soon as possible, thank you!</Alert>
+            <Alert variant="success">Thank you for your submission, our team will get back to you shortly!</Alert>
           ) : (
             <Form onSubmit={onSubmit}>
-              <Form.Group controlId="firstName">
-                <Form.Label>First Name</Form.Label>
-                <Form.Control
-                  type="text"
-                  name="firstName"
-                  value={formValues.firstName}
-                  onChange={handleChange}
-                  required
-                />
+              <h2 className="text-center mb-4">Pet Adoption Application</h2>
+
+              <Form.Group as={Row} controlId="firstName">
+                <Form.Label column sm={4}>First Name</Form.Label>
+                <Col sm={8}>
+                  <Form.Control
+                    type="text"
+                    name="firstName"
+                    value={formValues.firstName}
+                    onChange={handleChange}
+                    required
+                  />
+                </Col>
               </Form.Group>
 
-              <Form.Group controlId="lastName">
-                <Form.Label>Last Name</Form.Label>
-                <Form.Control
-                  type="text"
-                  name="lastName"
-                  value={formValues.lastName}
-                  onChange={handleChange}
-                  required
-                />
+              <Form.Group as={Row} controlId="lastName">
+                <Form.Label column sm={4}>Last Name</Form.Label>
+                <Col sm={8}>
+                  <Form.Control
+                    type="text"
+                    name="lastName"
+                    value={formValues.lastName}
+                    onChange={handleChange}
+                    required
+                  />
+                </Col>
               </Form.Group>
 
-              <Form.Group controlId="phoneNumber">
-                <Form.Label>Phone Number</Form.Label>
-                <Form.Control
-                  type="tel"
-                  name="phoneNumber"
-                  value={formValues.phoneNumber}
-                  onChange={handleChange}
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                  placeholder="123-456-7890"
-                />
-                <Form.Text className="text-muted">
-                  Format: 123-456-7890
-                </Form.Text>
+              <Form.Group as={Row} controlId="phoneNumber">
+                <Form.Label column sm={4}>Phone Number</Form.Label>
+                <Col sm={8}>
+                  <Form.Control
+                    type="tel"
+                    name="phoneNumber"
+                    value={formValues.phoneNumber}
+                    onChange={handleChange}
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder="123-456-7890"
+                  />
+                </Col>
               </Form.Group>
 
-              <Form.Group controlId="email">
-                <Form.Label>Email</Form.Label>
-                <Form.Control
-                  type="email"
-                  name="email"
-                  value={formValues.email}
-                  onChange={handleChange}
-                  pattern="\S+@\S+\.\S+"
-                />
-                <Form.Text className="text-muted">
-                  Format: email@domain.com
-                </Form.Text>
+              <Form.Group as={Row} controlId="email">
+                <Form.Label column sm={4}>Email</Form.Label>
+                <Col sm={8}>
+                  <Form.Control
+                    type="email"
+                    name="email"
+                    value={formValues.email}
+                    onChange={handleChange}
+                    pattern="\S+@\S+\.\S+"
+                    placeholder="email@domain.com"
+                  />
+                </Col>
               </Form.Group>
 
-              <Form.Group controlId="aboutSelf">
-                <Form.Label>About Me</Form.Label>
-                <Form.Control
-                  as="textarea"
-                  name="aboutSelf"
-                  value={formValues.aboutSelf}
-                  onChange={handleChange}
-                  rows={3}
-                  placeholder="Tell us a little about yourself..."
-                />
+              <Form.Group as={Row} controlId="aboutSelf">
+                <Form.Label column sm={4}>About Me</Form.Label>
+                <Col sm={8}>
+                  <Form.Control
+                    as="textarea"
+                    name="aboutSelf"
+                    value={formValues.aboutSelf}
+                    onChange={handleChange}
+                    rows={3}
+                    placeholder="Tell us a little about yourself..."
+                  />
+                </Col>
               </Form.Group>
-
               {pet?.animalType === 'dog' && (
-                <Form.Check
-                  type="checkbox"
-                  id="hasFencedYard"
-                  label="Do you have a fenced yard?"
-                  name="hasFencedYard"
-                  checked={formValues.hasFencedYard}
-                  onChange={handleChange}
-                />
+                <div className="checkbox-section">
+                  {/* Group of checkboxes for dog-specific questions */}
+                  <Form.Group controlId="hasFencedYard" className="mb-3">
+                    <Form.Check
+                      type="checkbox"
+                      name="hasFencedYard"
+                      checked={formValues.hasFencedYard}
+                      onChange={handleChange}
+                      label="Do you have a fenced yard?"
+                    />
+                  </Form.Group>
+
+                  <Form.Group controlId="hasChildren" className="mb-3">
+                    <Form.Check
+                      type="checkbox"
+                      name="hasChildren"
+                      checked={formValues.hasChildren}
+                      onChange={handleChange}
+                      label="Do you have children?"
+                    />
+                  </Form.Group>
+
+                  <Form.Group controlId="hasOtherPets" className="mb-3">
+                    <Form.Check
+                      type="checkbox"
+                      name="hasOtherPets"
+                      checked={formValues.hasOtherPets}
+                      onChange={handleChange}
+                      label="Do you have other pets?"
+                    />
+                  </Form.Group>
+                </div>
               )}
 
-              <Form.Check
-                type="checkbox"
-                id="hasChildren"
-                label="Do you have children?"
-                name="hasChildren"
-                checked={formValues.hasChildren}
-                onChange={handleChange}
-              />
-
-              <Form.Check
-                type="checkbox"
-                id="hasOtherPets"
-                label="Do you have other pets?"
-                name="hasOtherPets"
-                checked={formValues.hasOtherPets}
-                onChange={handleChange}
-              />
-
-              <Button variant="primary" type="submit">
+              <Button variant="primary" type="submit" className="w-100">
                 Submit
               </Button>
             </Form>
