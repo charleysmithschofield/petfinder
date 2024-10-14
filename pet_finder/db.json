@@ -2,7 +2,6 @@
   "adoptions": [
     {
       "firstName": "Cassian",
-      "middleName": "Jasper",
       "lastName": "Smith",
       "hasFencedYard": true,
       "hasChildren": false,
@@ -14,7 +13,6 @@
     },
     {
       "firstName": "Michelle",
-      "middleName": "Erica",
       "lastName": "Thompson",
       "hasFencedYard": true,
       "hasChildren": false,
@@ -25,7 +23,6 @@
       "id": 1
     },{
       "firstName": "Michael",
-      "middleName": "R",
       "lastName": "Bronson",
       "hasFencedYard": true,
       "hasChildren": false,
