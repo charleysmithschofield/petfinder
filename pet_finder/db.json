@@ -87,6 +87,17 @@
       "phoneNumber": "123-455-8686",
       "email": "enauk@sle.com",
       "aboutSelf": "asdkfhaksd"
+    },
+    {
+      "id": "bb4b",
+      "firstName": "Charley",
+      "lastName": "Smith-Schofield",
+      "hasFencedYard": false,
+      "hasChildren": true,
+      "hasOtherPets": false,
+      "phoneNumber": "867-334-3893",
+      "email": "charleyschofield@hotmail.com",
+      "aboutSelf": "adskghfl"
     }
   ],
   "pets": [
@@ -207,6 +218,30 @@
       "adopted": false,
       "image": "dog5.jpg",
       "breed": "Medium Mixed Breed",
+      "isBoy": true,
+      "isAdopted": false
+    },
+    {
+      "id": "11",
+      "name": "",
+      "animalType": "cat",
+      "age": 1,
+      "description": "Beans is a sweet little Orange Tabby loves to spend her days lounging in sunny spots and chasing after her favorite toy mouse. When she's not curled up napping, you'll find her pouncing around, practicing her jumps, or exploring every corner of her home. Beans adores a good cuddle session and will happily settle into your lap for some head scratches. Her favorite toy? A fuzzy ball with a bell that she never gets tired of batting across the room! With her playful energy and gentle nature, Beans is sure to bring endless joy to her forever home",
+      "adopted": false,
+      "image": "cat6.jpg",
+      "breed": "Orange Tabby",
+      "isBoy": false,
+      "isAdopted": false
+    },
+    {
+      "id": "12",
+      "name": "Bella",
+      "animalType": "dog",
+      "age": 4,
+      "description": "Bella is an energetic and affectionate 4-year-old brown mixed breed dog loves nothing more than a good game of fetch. Whether it’s a ball, stick, or her absolute favorite—a squeaky toy—Bella will happily chase it down with endless enthusiasm. When she's not playing, Bella enjoys long walks and spending time by your side, soaking up all the attention she can get. Her loyalty and playful nature make her the perfect companion for an active family. Bella's favorite pastime? Running around the yard, squeaky toy in mouth, tail wagging with joy!",
+      "adopted": false,
+      "image": "dog6.jpg",
+      "breed": "Brown Mixed Breed",
       "isBoy": true,
       "isAdopted": false
     }
