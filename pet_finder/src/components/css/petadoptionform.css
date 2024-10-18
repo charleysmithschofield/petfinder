@@ -46,7 +46,7 @@
 }
 
 .PetAdoptionForm .form-check-input:checked {
-  border: 2px solid #007bff;
+  border: 2px solid #348ef5;
 }
 
 .PetAdoptionForm .form-check-input:checked::before {
@@ -54,7 +54,7 @@
   display: block;
   width: 20px;
   height: 20px;
-  background: #007bff;
+  background: #348ef5;
 }
 
 .checkbox-section {
@@ -65,4 +65,9 @@
 
 .checkbox-section .form-group {
   margin-bottom: 0; 
+}
+
+.PetAdoptionForm .btn-primary {
+  background-color: #fe8780 !important;
+  border-color: #fe8780 !important;
 }

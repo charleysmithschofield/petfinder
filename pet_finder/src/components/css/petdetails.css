@@ -25,13 +25,12 @@
   padding-left: 20px;
 }
 
-/* src/components/css/petcard.css */
-.pet-card .btn-primary {
-  background-color: #fe8780 !important; /* Add !important if necessary */
-  border-color: #fe8780 !important; /* Add !important if necessary */
+.PetDetails .btn-primary {
+  background-color: #fe8780 !important;
+  border-color: #fe8780 !important; 
 }
 
-.pet-card .btn-primary:hover {
-  background-color: #f06f66 !important; /* Hover color */
-  border-color: #f06f66 !important; /* Hover border color */
+.PetDetails .btn-primary:hover {
+  background-color: #f06f66 !important; 
+  border-color: #f06f66 !important;
 }
