@@ -9,7 +9,7 @@ export function Header() {
           <img src="img/PetFinderLogo.png" width="120" height="120" alt="PetFinder Logo" />
         </Navbar.Brand>
         <Nav className="mx-auto">
-          <h1 className="text-center text-white">Help them find their fur-ever home!</h1>
+          <h1 className="text-center text-white">Help them find their Fur-Ever Home!</h1>
         </Nav>
       </Container>
     </Navbar>

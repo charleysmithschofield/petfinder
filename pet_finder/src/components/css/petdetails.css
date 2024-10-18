@@ -1,5 +1,5 @@
 .PetDetails {
-  padding: 20px;
+  padding: 5px;
 }
 
 .PetDetails img {
@@ -25,3 +25,13 @@
   padding-left: 20px;
 }
 
+/* src/components/css/petcard.css */
+.pet-card .btn-primary {
+  background-color: #fe8780 !important; /* Add !important if necessary */
+  border-color: #fe8780 !important; /* Add !important if necessary */
+}
+
+.pet-card .btn-primary:hover {
+  background-color: #f06f66 !important; /* Hover color */
+  border-color: #f06f66 !important; /* Hover border color */
+}

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Pet } from "../models/Pet";
 import { getPetById } from "../services/petService";
@@ -10,14 +10,14 @@ export function PetDetails() {
   const [pet, setPet] = useState<Pet | null>(null);
 
   useEffect(() => {
-    if(id !== undefined) {
-      getPetById(Number(id)).then((pet) => setPet(pet))
+    if (id !== undefined) {
+      getPetById(Number(id)).then((pet) => setPet(pet));
     }
   }, [id]);
 
-  return(
+  return (
     <div className="PetDetails">
-      { pet && 
+      {pet && 
       <Row>
         <Col lg={2}></Col>
         <Col lg={8}>
@@ -25,12 +25,15 @@ export function PetDetails() {
             <Card.Body>
               <Row>
                 <Col lg={4}>
-                  <img src={`/img/${pet.image}`}></img>
+                  <img src={`/img/${pet.image}`} alt={pet.name} />
                 </Col>
                 <Col lg={8}>
-                <Card.Title>{pet.name}</Card.Title>
-                <Card.Text>{pet.breed} - {pet.isBoy ? 'Boy' : 'Girl'}</Card.Text>
-                <Card.Text>{pet.description}</Card.Text>
+                  <Card.Title>{pet.name}</Card.Title>
+                  <Card.Text>{pet.breed} - {pet.isBoy ? 'Boy' : 'Girl'}</Card.Text>
+                  <Card.Text>{pet.description}</Card.Text>
+                  <Link to={`/adoptions/${pet.id}`} className="btn btn-primary">
+                    Adopt Me
+                  </Link>
                 </Col>
               </Row>
             </Card.Body>
@@ -39,5 +42,5 @@ export function PetDetails() {
         <Col lg={2}></Col>
       </Row>}
     </div>
-  )
+  );
 }
