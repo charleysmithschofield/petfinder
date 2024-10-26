@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { getPets } from "../services/petService";
 import { Col, Form, Row } from "react-bootstrap";
 import { PetCard } from "./PetCard";
+import "./css/petlist.css";
 
 export function PetList() {
   const [pets, setPets] = useState<Pet[]>([]);
@@ -21,10 +22,10 @@ export function PetList() {
 
   return(
     <div className="PetList">
-      <Form.Group controlId="search">
+      <Form.Group controlId="search" className="search-bar-wrapper">
         <Form.Control 
         type="text"
-        placeholder="Search by pet name or breed"
+        placeholder="Search for Pet by Name or Breed"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         />
