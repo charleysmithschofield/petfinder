@@ -24,3 +24,55 @@
   font-weight: 450;
   font-size: 18px;
 }
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px; 
+}
+
+.custom-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 10px; 
+}
+
+.custom-button:last-child {
+  margin-right: 0; 
+}
+
+.custom-button.primary {
+  background-color: #f87972;
+  color: white; 
+  border: none;
+}
+
+.custom-button.secondary {
+  background-color: #4c98ef;
+  color: white; 
+  border: none;
+}
+
+.custom-button.primary:hover {
+  background-color: #f35c51;
+}
+
+.custom-button.secondary:hover {
+  background-color: #007bff;
+}
+
+.custom-button.selected {
+  background-color: #fa3131; 
+  color: white; 
+}
+
+.custom-button.primary.selected {
+  background-color: #fa3131; 
+}
+
+.custom-button.secondary.selected {
+  background-color: #1872f9fb;
+}
