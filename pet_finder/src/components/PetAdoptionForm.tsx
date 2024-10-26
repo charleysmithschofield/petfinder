@@ -21,17 +21,21 @@ export function PetAdoptionForm() {
     aboutSelf: ''
   });
 
+  // Extract pet ID from the route parameters
   const { id } = useParams();
 
+  // Load the pet data when component mounts or ID changes
   useEffect(() => {
     if (id !== undefined) {
-      getPetById(Number(id)).then((pet) => { setPet(pet); });
+      getPetById(Number(id)).then((pet) => {
+        setPet(pet); // Store retrieved pet data in state
+      });
     }
   }, [id]);
 
+  // Update form values based on user input
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
-
     if (type === 'checkbox') {
       setFormValues(prev => ({
         ...prev,
@@ -45,23 +49,37 @@ export function PetAdoptionForm() {
     }
   };
 
+  // Handle form submission, submit the data, and set form submission state
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     postAdoption(formValues);
     setFormSubmitted(true);
   }
 
+  // Render adoption form header with pet’s name if available
   return (
     <div className="PetAdoptionForm container my-5">
       <Row>
         <Col lg={3}></Col>
         <Col lg={6}>
+
+          {/* Show success message or adoption form */}
           {formSubmitted ? (
-            <Alert variant="success">Thank you for your submission, our team will get back to you shortly!</Alert>
+            <Alert variant="success">
+              Thank you for your submission, our team will get back to you shortly!
+            </Alert>
           ) : (
             <Form onSubmit={onSubmit}>
-              <h2 className="text-center mb-4">Pet Adoption Application</h2>
+              <h2 className="text-center mb-4">Pet Adoption Application for: {pet ? pet.name : 'Loading...'}</h2>
 
+              {/* Pet Image */}
+              {pet?.image && (
+                <div className="text-center mb-4">
+                  <img src={`/img/${pet.image}`} alt={`${pet.name}`} className="pet-image" />
+                </div>
+              )}
+
+              {/* Form fields for user input */}
               <Form.Group as={Row} controlId="firstName">
                 <Form.Label column sm={4}>First Name</Form.Label>
                 <Col sm={8}>
@@ -130,8 +148,8 @@ export function PetAdoptionForm() {
                 </Col>
               </Form.Group>
 
+              {/* Checkbox questions */}
               <div className="checkbox-section">
-                {/* Always show all questions for both dogs and cats */}
                 <Form.Group controlId="hasFencedYard" className="mb-3">
                   <Form.Check
                     type="checkbox"
@@ -163,6 +181,7 @@ export function PetAdoptionForm() {
                 </Form.Group>
               </div>
 
+              {/* Form submission button */}
               <Button variant="primary" type="submit" className="w-100">
                 Submit
               </Button>

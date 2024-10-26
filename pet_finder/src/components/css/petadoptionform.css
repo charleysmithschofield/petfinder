@@ -71,3 +71,10 @@
   background-color: #fe8780 !important;
   border-color: #fe8780 !important;
 }
+
+.pet-image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px; /* Optional: add some styling */
+}
