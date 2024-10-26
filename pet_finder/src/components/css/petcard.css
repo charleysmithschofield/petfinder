@@ -53,6 +53,6 @@
 }
 
 .pet-card .btn-secondary:hover {
-  background-color: #468bcf !important; 
-  border-color: #468bcf !important;
+  background-color: #007bff !important;
+  color: white;
 }

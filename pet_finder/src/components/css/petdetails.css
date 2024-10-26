@@ -31,6 +31,16 @@
 }
 
 .PetDetails .btn-primary:hover {
-  background-color: #f06f66 !important; 
-  border-color: #f06f66 !important;
+  background-color: #f35c51 !important;
+}
+
+.PetDetails .custom-back-button {
+  background-color: #559DEF;
+  color: white;
+  border: none;
+}
+
+.PetDetails .custom-back-button:hover {
+  background-color: #007bff;
+  color: white;
 }

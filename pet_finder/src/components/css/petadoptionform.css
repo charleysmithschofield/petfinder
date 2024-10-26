@@ -72,6 +72,10 @@
   border-color: #fe8780 !important;
 }
 
+.PetAdoptionForm .btn-primary:hover {
+  background-color: #f35c51 !important; 
+}
+
 .pet-image {
   width: 400px;
   height: 400px;

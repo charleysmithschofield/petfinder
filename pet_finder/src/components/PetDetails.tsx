@@ -34,6 +34,11 @@ export function PetDetails() {
                   <Link to={`/adoptions/${pet.id}`} className="btn btn-primary">
                     Adopt Me
                   </Link>
+                  <div className="mt-3">
+                    <Link to="/" className="btn btn-secondary custom-back-button">
+                      Back
+                    </Link>
+                  </div>
                 </Col>
               </Row>
             </Card.Body>
