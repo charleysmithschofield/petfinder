@@ -14,6 +14,7 @@ export function PetList() {
     getPets().then((pets) => setPets(pets));
   }, []);
 
+  // Filter pets based on name or breed when typed into search bar
   const filteredPets = pets.filter(
     (pet) => 
     pet.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -22,6 +23,7 @@ export function PetList() {
 
   return(
     <div className="PetList">
+      {/* Search Bar */}
       <Form.Group controlId="search" className="search-bar-wrapper">
         <Form.Control 
         type="text"
@@ -30,10 +32,12 @@ export function PetList() {
         onChange={(e) => setSearchQuery(e.target.value)}
         />
       </Form.Group>
-      <Row>
-        {filteredPets.map((pets) => (
-          <Col lg={4} key={pets.id}>
-            <PetCard pet={pets} />
+
+      {/* Pet Cards */}
+      <Row className="justify-content-center">
+        {filteredPets.map((pet) => (
+          <Col lg={4} key={pet.id} className="d-flex justify-content-center pet-list-col">
+            <PetCard pet={pet} />
           </Col>
         ))}
       </Row>
