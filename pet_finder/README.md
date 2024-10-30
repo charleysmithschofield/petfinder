@@ -65,7 +65,7 @@ Eager to find your purr-fect feline friend? Filter your search to showcase only 
 
 ### Name Search
 Have your heart set on a specific pet? Quickly locate them with our convenient name search feature.
-![Name Search](README-Images/DogsOnly.png)
+![Name Search](README-Images/NameSearch.png)
 
 ### Breed Search
 Looking for a specific breed? Effortlessly filter our home page by typing any breed into the search bar.
