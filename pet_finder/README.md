@@ -1,46 +1,76 @@
-# Getting Started with Create React App
+# Petfinder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Find your next furry companion with Petfinder! 
+This web application allows you to effortlessly search for adoptable pets by name or breed, making it easier than ever to find your perfect match. Whether you're looking for a playful puppy or a cuddly kitten, you can filter your search to display only dogs or cats, ensuring you see exactly what you're interested in.
 
-## Available Scripts
+Browse through a variety of adoptable pets, each with detailed profiles to help you make an informed decision. Once you find the pet that suits you, simply fill out our easy adoption form and await a response from our dedicated staff. Let us help you bring joy into your home with a new best friend!
 
-In the project directory, you can run:
+## Features
+* Search by Name or Breed: Quickly find specific pets with our intuitive search functionality.
+* Filter Options: Narrow your search to show only dogs or cats.
+* Adoption Profiles: View detailed information about each pet to learn more about their personalities and needs.
+* Easy Adoption Process: Complete a simple form to express your interest in adopting a pet.
 
-### `npm start`
+## Tech Stack
+* React
+* Node.js
+* Express
+* MongoDB
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Installation Process
+1. Clone the GitHub Repo:
+    ```
+    git clone https://github.com/charleysmithschofield/petfinder.git
+    ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. Navigate to the project directory:
 
-### `npm test`
+    ```
+    cd petfinder
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Install the required dependencies:
+    ```
+    npm install
+    ```
 
-### `npm run build`
+4. Set up the environment variables. Create a .env file in the root directory and add your API keys. An example might look like:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```
+    REACT_APP_PETFINDER_API_KEY=your_api_key_here
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. Start the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```
+    npm run dev
+    ```
 
-### `npm run eject`
+6. Open your browser to http://localhost:3000 to view the application
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Photos:
+### Home Page
+Discover our lovable adoptable pets on the home page and find your new best friend!
+![Home Page](README-Images/HomePage.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Dogs Only
+Searching for a loyal canine companion? Use our filter to view only dogs available for adoption!
+![Dogs Only](README-Images/DogsOnly.png)
 
-## Learn More
+### Cats Only
+Eager to find your purr-fect feline friend? Filter your search to showcase only our charming cats available for adoption!
+![Cats Only](README-Images/CatsOnly.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Name Search
+Have your heart set on a specific pet? Quickly locate them with our convenient name search feature.
+![Name Search](README-Images/DogsOnly.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Breed Search
+Looking for a specific breed? Effortlessly filter our home page by typing any breed into the search bar.
+![Breed Search](README-Images/BreedSearch.png)
+
+### Adoption Page
+Complete our quick and easy adoption application to take the first step toward welcoming a pet into your home!
+![Adoption Page](README-Images/AdoptionForm.png)
